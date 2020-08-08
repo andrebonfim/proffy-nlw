@@ -1,0 +1,28 @@
+{
+  "name": "NLW",
+  "version": "1.0.0",
+  "description": "- Criado especificamente para integrar as aulas da **Rocketseat** referente ao **Next Level Week**. Uma semana de intensa imersão no que há de melhor em programação e seguindo a trilha necessária para firmar as bases do sucesso na programação web. Essa semana foi criada pela Rocketseat para levar os participantes ao **Próximo Nível** e estou muito feliz por participar desse projeto! :rocket:",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrebonfim/proffy-nlw.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrebonfim/proffy-nlw/issues"
+  },
+  "homepage": "https://github.com/andrebonfim/proffy-nlw#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.2",
+    "sqlite-async": "^1.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

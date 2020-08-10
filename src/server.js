@@ -1,30 +1,27 @@
 // ====Inicia a config do server e adds====
-const express = require('express')
-const server = express() // Express já em exec. retornando objeto
-const nunjucks = require('nunjucks')
+const express = require('express');
+const server = express(); // Express já em exec. retornando objeto
+const { pageLanding, pageStudy, pageGiveClasses, saveClasses } = require('./pages') // Páginas
 
-// ====Busca as páginas de CSS e Javascript como também imagens...====
-server.use(express.static("public"))
 
-// ====Páginas====
-const { pageLanding, pageStudy, pageGiveClasses, saveClasses } = require('./pages')
-
-// ====Rotas====
-server
-.get("/", pageLanding) // ..., (req, res) => {})
-.get("/study", pageStudy)
-.get("/give-classes", pageGiveClasses)
-.post("/save-classes", saveClasses)
-
-// ====Receber os dados do req.body====
-.use(express.urlencoded({ extended: true }))
-
+const nunjucks = require('nunjucks');
 // ====Configuração do Nunjucks====
 nunjucks.configure('src/views', {
   express: server,
   noCache: true,
 })
 
+server
+// ====Receber os dados do req.body====
+.use(express.urlencoded({ extended: true }))
+// ====Busca as páginas de CSS e Javascript como também imagens...====
+.use(express.static("public"))
+// ====Rotas====
+.get("/", pageLanding) // ..., (req, res) => {})
+.get("/study", pageStudy)
+.get("/give-classes", pageGiveClasses)
+.post("/save-classes", saveClasses)
+
 // ====Configuração da porta do server====
-server.listen(5000)
+.listen(5000);
 

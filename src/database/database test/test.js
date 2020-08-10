@@ -1,4 +1,4 @@
-const Database = require('./db')
+const Database = require('../db')
 const createProffy = require('./createProffy')
 
 Database.then(async (db) => {

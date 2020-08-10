@@ -8,7 +8,7 @@ const subjects = [
   "História",
   "Matemática",
   "Português",
-  "Química",
+  "Química"
 ]
 
 const weekdays = [
@@ -18,7 +18,7 @@ const weekdays = [
   "Quarta-feira",
   "Quinta-feira",
   "Sexta-feira",
-  "Sábado",
+  "Sábado"
 ]
 
 // ====Função para transformar dados em "String" => Recebe um número e retorna uma string de subjects
@@ -29,7 +29,7 @@ function getSubject(subjectNumber) {
 
 // Converter horas em minutos
 function convertHoursToMinutes(time) {
-  const { hour, minutes } = time.split(":")
+  const [ hour, minutes ] = time.split(":")
   return Number((hour * 60) + minutes)
 }
 

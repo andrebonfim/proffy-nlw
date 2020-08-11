@@ -1,7 +1,7 @@
 // ====Inicia a config do server e adds====
 const express = require('express');
 const server = express(); // Express já em exec. retornando objeto
-const { pageLanding, pageStudy, pageGiveClasses, saveClasses } = require('./pages') // Páginas
+const { pageLanding, pageStudy, pageGiveClasses, pageSucess, saveClasses } = require('./pages') // Páginas
 
 
 const nunjucks = require('nunjucks');
@@ -20,6 +20,7 @@ server
 .get("/", pageLanding) // ..., (req, res) => {})
 .get("/study", pageStudy)
 .get("/give-classes", pageGiveClasses)
+.get("/page-sucess", pageSucess)
 .post("/save-classes", saveClasses)
 
 // ====Configuração da porta do server====

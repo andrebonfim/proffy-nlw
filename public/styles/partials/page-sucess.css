@@ -1,0 +1,55 @@
+#page-sucess{
+  background-color: var(--color-primary);
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#container h1 {
+  color: var(--color-title-in-primary);
+  font-size: 5rem;
+  font-family: Archivo;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 5rem;
+  padding-bottom: 2rem;
+}
+
+#container p {
+  color: var(--color-text-in-primary);
+  padding-bottom: 4rem;
+  font-size: 2rem;
+  line-height: 3rem;
+  font-family: Poppins;
+} 
+
+.image-sucess {
+  display: none;
+}
+
+.fa, .far, .fas {
+  font-size: 7rem;
+  padding-bottom: 3rem;
+  color: var(--color-secondary);
+}
+
+@media (min-width: 769px) {
+  .image-sucess {
+    display: inherit;
+    position: absolute;
+    max-height: 560px;
+    max-width: 1200px;
+  }
+
+  .buttons-container {
+    position: relative;
+  }
+
+  .btn-secondary {
+    position: absolute;
+    top: 1rem;
+  }
+}

@@ -84,9 +84,13 @@ e desses 90vw a largura máxima será de 700px  */
   margin-left: 0.8rem;
 }
 
-@media (max-width: 699px) /* abaixo de 699px */ {
+@media (max-width: 1100px) /* abaixo de 1100px */ {
   :root {
     font-size: 40%;
+  }
+
+  .hero-image {
+    height: 10rem;
   }
 }
 /* Fim do mobile First */

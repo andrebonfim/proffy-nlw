@@ -7,7 +7,7 @@ addEventListener('click', cloneField)
 function cloneField() {
   //Duplicar os campos
   // Qual campo?
-  const newFieldContainer = document.querySelector('.schedule-item').cloneNode(true)
+  const newFieldContainer = document.querySelector('.wrapper').cloneNode(true)
 
   // Pegar os campos. Que campos?
   const fields = newFieldContainer.querySelectorAll('input')

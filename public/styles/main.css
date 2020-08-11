@@ -53,6 +53,42 @@ textarea {
   max-width: 700px;
 }
 
+/* Estilizando Botões */
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons-container a {
+  width: 30rem;
+  height: 10.4rem;
+  border-radius: 0.8rem;
+  font: 700 2.4rem Archivo;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background 0.2;
+  color: var(--color-button-text);
+}
+
+.buttons-container a.btn-primary {
+  background: var(--color-primary-lighter);
+}
+
+.buttons-container a.btn-primary:hover {
+  background: var(--color-primary-light);
+}
+
+.buttons-container a.btn-secondary {
+  background: var(--color-secondary);
+}
+
+.buttons-container a.btn-secondary:hover {
+  background: var(--color-secondary-dark);
+}
+
 @media(min-width: 700px) /* De 700px pra cima */ {
   :root {
     font-size: 62.5%; /* todo 1rem vai ser relativo a 10px */

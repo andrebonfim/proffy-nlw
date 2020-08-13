@@ -10,7 +10,7 @@
 #page-give-classes main {
   background: var(--color-box-base);
   width: 100%;
-  max-width: 74rem;
+  max-width: 90vw;
   border-radius: .8rem;
   margin: -3.2rem auto 3.2rem;
   padding-top: 6.4rem;
@@ -40,10 +40,10 @@
   font: 700 1.6rem Archivo;
   cursor: pointer;
   transition: 0.2s;
+  outline: none;
 }
 
 #page-give-classes fieldset legend button:hover {
-  transform: translateY(-5px);
   color: var(--color-primary-dark);
 }
 
@@ -94,10 +94,38 @@
   margin-top: 3.2rem;
 }
 
+.schedule-item {
+  position: relative;
+}
+
 .schedule-item+.schedule-item { /*  */
   margin-top: 3.2rem;
   padding-top: 3.2rem;
   border-top: 1px solid var(--color-line-in-white);
+}
+
+/* Botão de fechar nas schedules */
+
+.close {
+  color: var(--color-small-info);
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.close:hover {
+  transform: translateY(-3px);
+}
+
+.off {
+  display: none;
+}
+
+.on {
+  display: initial;
 }
 
 @media (min-width: 700px) {
@@ -134,5 +162,8 @@
   #page-give-classes main footer button {
     margin-top: 0;
     width: 200px;
+  }
+  .close {
+    font-size: 1.5rem;
   }
 }

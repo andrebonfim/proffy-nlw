@@ -27,33 +27,45 @@
   <div id="container">
     <header class="page-header">
       <div class="top-bar-container">
-        <a href="/">
-          <img src="/images/icons/back.svg" alt="Voltar">
-        </a>
-        <img src="/images/logo.svg" alt="Proffy">
+        <div class="top-bar-sub-container">
+          <a href="/">
+            <i class="fas fa-long-arrow-alt-left"></i>
+          </a>
+          <p>Dar aulas</p>
+          <img src="/images/logo.svg" alt="Proffy">
+        </div>
       </div>
       <div class="header-content">
-        <strong>Que incrível que você quer dar aulas!</strong>
-        <p>O primeiro passo é preencher esse formulário de inscrição</p>
+        <div class="description-header">
+          <strong>Que incrível que você quer dar aulas!</strong>
+          <p>O primeiro passo é preencher esse formulário de inscrição</p>
+        </div>
+        <div class="decoration-header">
+          <img src="/images/icons/rocket.svg" alt="Imagem de Foguete">
+          <p>Prepare-se! <br><span>Vai ser o máximo</span></p>
+        </div>
       </div>
     </header>
     <main>
       <form action="/save-classes" id="create-class" method="POST">
         <fieldset>
           <legend>Seus dados</legend>
-          <div class="input-block">
+          <div class="input-block input-block-name">
             <label for="name">Nome Completo</label>
             <input name="name" id="name" required>
           </div>
-          <div class="input-block">
-            <label for="avatar">Link da sua foto <small>(comece com https://)</small></label>
-            <input name="avatar" id="avatar" type="url" required>
+          <div class="input-block form-grid">
+            <div class="input-block input-block-photo">
+              <label for="avatar">Link da sua foto <small>(comece com https://)</small></label>
+              <input name="avatar" id="avatar" type="url" required>
+            </div>
+            <div class="input-block input-block-whatsapp">
+              <label for="whatsapp">Whatsapp <small>(somente números)</small> </label>
+              <input name="whatsapp" id="whatsapp" type="tel" pattern="[0-9]{2} [0-9]{5} [0-9]{4}" 
+              placeholder="(  ) _ _ _ _ _  _ _ _ _" required>
           </div>
-          <div class="input-block">
-            <label for="whatsapp">Whatsapp <small>(somente números)</small> </label>
-            <input name="whatsapp" id="whatsapp" type="number" required>
           </div>
-          <div class="textarea-block">
+          <div class="textarea-block textarea-block-area">
             <label for="bio">Biografia</label>
             <textarea name="bio" id="bio" required></textarea>
           </div>
